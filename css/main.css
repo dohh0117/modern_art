@@ -48,6 +48,7 @@
     z-index: 1;
     transform: all 400ms;
     opacity:0 ;
+    display: none;
 }
 #header.on::after{
     content: '';
@@ -59,7 +60,7 @@
     top: 130px;
     z-index: 1;
     transform: all 400ms;
-    opacity:0.5 ;
+    display: none;
 }
 #header-in{
     width: 1380px; margin: 0 auto;
@@ -192,42 +193,56 @@
 }
 /* 컨테츠 */
 #contents{
-
+/* position: relative; */
 }
 #slider-in{
     margin: 0 auto;
-    width: 1380px;height: auto;
+    width: 1380px;height: 500px;
     /* background-color: aquamarine; */
 }
-.slideimg-1{
-    width: 100%;
-    height: auto;
-    max-width: 1380px;
+#slider{
+   width: 1380px;
+   overflow: hidden;
 }
-@media(max-width: 1000px){
+#slider>ul{
+    
+    display: flex;
+    width: 100%;
+    z-index: -10;
+}
+.img-box{
+    margin-top: 10px;
+    overflow: hidden;
+    max-width: 1380px;
+    height: 359px;
+    border-radius: 10px;
+   
+}
+.slideimg{
+   width: 1400;
+   object-fit: fill;
+
+}
+/* @media(max-width: 1000px){
     .slideimg-1{
         max-width: 700px;
     }
-}
-.slide01>h3{
-    padding-top:60px ;
+} */
+.slide>h3{
+    padding-top:34px ;
     font-size: 48px;
     font-weight: 700;
-    letter-spacing: -0.48px;
+    letter-spacing: -2px;
     color: var(--font-color);
 }
-.slide01>p{
+.slide>p{
     font-size: 18px;
     font-weight: 400;
-    letter-spacing: -0.18px;
+    letter-spacing: -0.3px;
     color: var(--font-color);
 }
-.slide01 .img-box{
-    margin-top: 114px;
-}
+
 #resume-go-to{
-  height: px;
- 
 }
 #resume-go-to-in{
     margin: 0 auto;
@@ -239,14 +254,14 @@
 
 .resume-txt{}
 .resume-txt>h3{
-    padding-top:23px ;
+    padding-top:9px ;
     font-size: 28px;
     font-weight: 700;
     letter-spacing: -0.28px;
     color: var(--font-color);
 }
 .resume-txt>ul{
-    padding-top:5px ;
+    padding-top:px ;
     padding-bottom: 5px;
 }
 .resume-txt>ul>li{
@@ -258,11 +273,11 @@
 }
 
 .resume-btn{
-    padding-top: 11px;
+    padding-top: 1px;
 }
 .resume-btn>ul{}
 .resume-btn>ul>li{
-    padding-top:9px ;
+    padding-top:5px ;
 }
 .resume-btn>ul>li>a{
     display: block;
@@ -468,6 +483,7 @@
 }
 .exhibi-top{
     display: flex;
+    justify-content: space-between;
 }
 .contents-ttl-exhibi>h2{
     font-size: 36px;
@@ -476,13 +492,13 @@
 }
 .contents-ttl-exhibi>p{
     padding-top: 3px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     color: var(--caption-color);
 }
 .museun-select-mn{
     padding-top: 30px;
-    margin-left:735px ;
+    margin-left:435px ;
     width: 540px;
     display: flex;
     justify-content: space-between;
@@ -500,13 +516,12 @@
     display: flex;
     justify-content: space-between;
 }
-.exhibi-go-to{
-    margin-left:135px ;
+.exhibi-go-to{ 
     padding-top: 20px;
     background: none;
     border: none;
     color: var(--font-color3);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     cursor: pointer;
     display: flex;
@@ -517,7 +532,10 @@
     padding-left: 3px;
 }
 .exhibi-txt-box{
-    padding-top: 8px;
+    padding-top: 15px;
+}
+.exhibipost{
+    width: 317px;
 }
 .exhibi-locatio>p{
     display: block;
@@ -549,8 +567,8 @@
 /* 소장품 */
 #collection{}
 #collection-in{
-    padding-top: 106px;
-    width: 1580px;
+    padding-top: 150px;
+    width: 1380px;
     margin:  0 auto;
     display: flex;
     justify-content: space-between;
@@ -567,10 +585,11 @@
     color: var(--caption-color);
 }
 .collection-list{
-    width: 1150px;
+    width: 1090px;
     display: flex;
     justify-content: space-between;
 }
+.collectimg{}
 .collection-ttl{
     font-size: 20px;
     font-weight: 700;
@@ -600,7 +619,7 @@
 /* 디지털미술관*/
 #digitol-museum{padding-top: 130px;}
 #digitol-museum-in{
-    width: 1580px;
+    width: 1380px;
     height: 538px;
     margin: 0 auto;
     border-top: 1px solid var(--main-bg-color);
@@ -661,7 +680,7 @@
 /* 새소식 */
 #news{}
 #news-in{
-    width: 1580px;margin: 0 auto;
+    width: 1380px;margin: 0 auto;
 }
 .news-top{
     padding-top: 34px;
@@ -758,7 +777,7 @@
 }
 #footer-in{
     margin:  0 auto;
-    width: 1580px;
+    width: 1380px;
 }
 .footer-top{
     padding-top:60px;
