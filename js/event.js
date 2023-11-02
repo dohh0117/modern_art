@@ -38,7 +38,21 @@ window.onload =function(){
    },5000)
  
 
-   
+   const tabBtn=document.querySelectorAll(".intro-mn>li")//버튼설정
+   const tabCont=document.querySelectorAll(".introcon-wrap")//컨텐츠 설정
+   console.log(tabBtn)
+   console.log(tabCont)
+   tabCont.forEach(el=>el.style.display="none");
+   tabCont[0].style.display="block";
+   tabBtn.forEach((tab,index)=>{
+      tab.addEventListener("click",()=>{
+         tabBtn.forEach(tab=>tab.classList.remove("active"));
+         tab.classList.add("active");
+
+         tabCont.forEach(cont=>cont.style.display="none");
+         tabCont[index].style.display="block";
+      })
+   })
 
  
 
