@@ -387,6 +387,7 @@
     border-radius: 50%;
     color: var(--font-color3);
     background: var(--main-bg-color);
+    cursor: pointer;
 }
 
 .intro-mn>li:hover{
@@ -675,6 +676,12 @@
 }
 .digital-content-ttl{
     padding-bottom: 13px;
+}
+.tt1{
+    padding-bottom: 41px;
+}
+.tt3{
+    padding-bottom: 41px;
 }
 
 .digital-content-ttl>p{

@@ -51,6 +51,7 @@ window.onload =function(){
 
          tabCont.forEach(cont=>cont.style.display="none");
          tabCont[index].style.display="block";
+
       })
    })
 
