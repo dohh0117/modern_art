@@ -26,7 +26,7 @@ window.onload =function(){
 
    setInterval(()=>{
       currentIndex++;
-      sliderWrap.style.marginLeft =-currentIndex*1380+"px";
+      sliderWrap.style.marginLeft =-currentIndex*100+"%";
       sliderWrap.style.transition ="all 0.6s";
       if(currentIndex ==3){
          setTimeout(()=>{
@@ -54,7 +54,16 @@ window.onload =function(){
 
       })
    })
+ const exhibiList=document.querySelectorAll(".museun-select-mn>li>a")//리스트선택
+ console.log(exhibiList)
+ exhibiList.forEach((tab)=>{
+   tab.addEventListener("mouseover",()=>{
+      exhibiList.forEach(tab=>tab.classList.remove("underline"));
+      tab.classList.add("underline");
+   })
+ })
 
+ 
  
 
 
